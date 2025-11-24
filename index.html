@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive Map - Import Shapefile</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-draw/dist/leaflet.draw.css" />
+</head>
+<body>
+  <h1>خريطة تفاعلية مع استيراد Shapefile</h1>
+  <div id="map"></div>
+
+  <div class="controls">
+    <h3>خيارات:</h3>
+    <input type="file" id="shpFile" accept=".zip" />
+    <button onclick="exportGeoJSON()">تصدير GeoJSON</button>
+    <button onclick="exportShapefile()">تصدير Shapefile</button>
+  </div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-draw/dist/leaflet.draw.js"></script>
+  <script src="https://unpkg.com/shp-write/shpwrite.js"></script>
+  <script src="https://unpkg.com/shpjs@latest/dist/shp.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
